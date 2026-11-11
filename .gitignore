@@ -1,0 +1,4 @@
+# Duplicate raw video file (audio is served from assets/music.mp4)
+WhatsApp Video*.mp4
+.DS_Store
+Thumbs.db

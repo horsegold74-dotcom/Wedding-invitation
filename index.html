@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>دعوة زفاف مايكل & رحيل | Michael & Raheel Wedding — 23/11/2026</title>
+  <meta name="description" content="بنعمة الله وبركة السيدة العذراء مريم، نتشرف بدعوتكم لحضور صلاة إكليل وزفاف مايكل & رحيل يوم الاثنين ٢٣ نوفمبر ٢٠٢٦ الساعة ٩:٠٠ صباحاً بكنيسة السيدة العذراء مريم ببورسعيد." />
+  <meta name="theme-color" content="#FAF7F2" />
+
+  <!-- Open Graph / WhatsApp Preview -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="دعوة زفاف مايكل & رحيل ✞ Michael & Raheel" />
+  <meta property="og:description" content="الاثنين 23 / 11 / 2026 — الساعة 9:00 صباحاً • كنيسة السيدة العذراء مريم ببورسعيد" />
+  <meta property="og:image" content="assets/hero-couple.jpg" />
+
+  <!-- Google Fonts: Arabic & English Luxury Calligraphy -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Aref+Ruqaa:wght@400;700&family=Cairo:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Great+Vibes&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="envelope-locked">
+
+  <!-- Ambient & Interactive Gold Dust Sparkle Canvas -->
+  <canvas id="sparkles-canvas" aria-hidden="true"></canvas>
+
+  <!-- Romantic Violin Soundtrack (Loops cleanly 0.25s - 25.15s) -->
+  <audio id="bg-music" src="assets/music.mp4" preload="auto"></audio>
+
+  <!-- ====================================================================
+       1. INTERACTIVE 3D EMBOSSED FLORAL ENVELOPE OVERLAY (00:00 - 00:06)
+       ==================================================================== -->
+  <div id="envelope-overlay" class="envelope-overlay" role="button" tabindex="0" aria-label="اضغط لفتح دعوة الزفاف">
+    <!-- Warm Golden Light Glowing from Inside the Envelope Seams -->
+    <div class="envelope-inner-glow"></div>
+
+    <!-- 4 Overlapping Embossed White Floral Triangular Flaps -->
+    <div class="envelope-flaps">
+      <div class="flap-wrap flap-left">
+        <div class="flap-surface"></div>
+      </div>
+      <div class="flap-wrap flap-right">
+        <div class="flap-surface"></div>
+      </div>
+      <div class="flap-wrap flap-bottom">
+        <div class="flap-surface">
+          <!-- Embossed Bas-Relief Floral Lace Filigree SVG -->
+          <svg class="flap-ornament" viewBox="0 0 300 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M150 12C132 12 122 28 104 32C86 36 74 22 54 28C34 34 28 52 10 56" stroke="#DFD5C5" stroke-width="2" stroke-linecap="round"/>
+            <path d="M150 12C168 12 178 28 196 32C214 36 226 22 246 28C266 34 272 52 290 56" stroke="#DFD5C5" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="150" cy="28" r="10" stroke="#E5DDD0" stroke-width="2" fill="#FBF9F5"/>
+            <circle cx="115" cy="40" r="7" stroke="#E5DDD0" stroke-width="1.6" fill="#FBF9F5"/>
+            <circle cx="185" cy="40" r="7" stroke="#E5DDD0" stroke-width="1.6" fill="#FBF9F5"/>
+            <path d="M90 58Q150 25 210 58" stroke="#E5DDD0" stroke-width="1.5" fill="none"/>
+          </svg>
+        </div>
+      </div>
+      <div class="flap-wrap flap-top">
+        <div class="flap-surface">
+          <svg class="flap-ornament" viewBox="0 0 300 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M150 12C132 12 122 28 104 32C86 36 74 22 54 28C34 34 28 52 10 56" stroke="#DFD5C5" stroke-width="2" stroke-linecap="round"/>
+            <path d="M150 12C168 12 178 28 196 32C214 36 226 22 246 28C266 34 272 52 290 56" stroke="#DFD5C5" stroke-width="2" stroke-linecap="round"/>
+            <circle cx="150" cy="28" r="10" stroke="#E5DDD0" stroke-width="2" fill="#FBF9F5"/>
+            <circle cx="115" cy="40" r="7" stroke="#E5DDD0" stroke-width="1.6" fill="#FBF9F5"/>
+            <circle cx="185" cy="40" r="7" stroke="#E5DDD0" stroke-width="1.6" fill="#FBF9F5"/>
+            <path d="M90 58Q150 25 210 58" stroke="#E5DDD0" stroke-width="1.5" fill="none"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- Center 3D Pearl & Champagne-Gold Wax Seal (M & R | مايكل & رحيل) -->
+    <div class="wax-seal-wrapper">
+      <div class="wax-seal-halo"></div>
+      <button id="wax-seal-btn" class="wax-seal-btn" type="button" aria-label="افتح دعوة زفاف مايكل ورحيل">
+        <div class="wax-seal-inner">
+          <span class="wax-seal-cross">✞</span>
+          <span class="wax-seal-monogram">M&amp;R</span>
+          <span class="wax-seal-ar">مايكل &amp; رحيل</span>
+        </div>
+      </button>
+      <div class="envelope-tap-hint">
+        <span class="hint-ar" data-ar="اضغط على الختم لفتح الدعوة" data-en="Tap the Wax Seal to Open">اضغط على الختم لفتح الدعوة</span>
+        <span class="hint-en">Michael &amp; Raheel • 23.11.2026</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====================================================================
+       FLOATING TOP BAR (Language Switch & Envelope Replay)
+       ==================================================================== -->
+  <div class="floating-topbar">
+    <button id="lang-toggle-btn" class="floating-pill-btn" type="button" aria-label="تغيير اللغة">
+      EN ✦ العربية
+    </button>
+    <button id="replay-envelope-btn" class="floating-pill-btn" type="button" aria-label="إعادة عرض الظرف">
+      <span>✉</span>
+      <span data-ar="الظرف" data-en="Envelope">الظرف</span>
+    </button>
+  </div>
+
+  <!-- ====================================================================
+       FLOATING BOTTOM-RIGHT MUSIC PAUSE/PLAY FAB (Matching Video)
+       ==================================================================== -->
+  <div class="music-fab-container">
+    <button id="music-fab" class="music-fab" type="button" aria-label="تشغيل أو إيقاف الموسيقى">
+      <!-- Pause Icon (||) -->
+      <svg class="icon-pause" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="display:none;">
+        <rect x="6" y="4" width="4" height="16" rx="1.5"></rect>
+        <rect x="14" y="4" width="4" height="16" rx="1.5"></rect>
+      </svg>
+      <!-- Play / Musical Note Icon -->
+      <svg class="icon-play" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+        <path d="M8 5v14l11-7z"></path>
+      </svg>
+    </button>
+  </div>
+
+  <!-- ====================================================================
+       MAIN INVITATION MOBILE/DESKTOP STAGE
+       ==================================================================== -->
+  <main class="invitation-stage">
+
+    <!-- ==================================================================
+         SECTION 1: HERO CATHEDRAL ARCHWAY (00:07 - 00:09)
+         ================================================================== -->
+    <section class="hero-section">
+      <div class="hero-artwork-wrap">
+        <img
+          src="assets/hero-couple.jpg"
+          alt="مايكل ورحيل في كنيسة السيدة العذراء مريم"
+          class="hero-artwork-img"
+        />
+        <div class="hero-artwork-overlay">
+          <div class="hero-title-card">
+            <div class="hero-cross-badge">
+              <span>✦</span>
+              <span>✞</span>
+              <span>✦</span>
+            </div>
+            <p class="hero-welcome-sub" data-ar="أهلاً بكم في صلاة إكليل وزفاف" data-en="Welcome to the Holy Matrimony of">
+              أهلاً بكم في صلاة إكليل وزفاف
+            </p>
+            <p class="hero-ceremony-type">Holy Crowning Ceremony of</p>
+
+            <h1 class="hero-couple-names-ar">
+              <span data-ar="مايكل" data-en="Michael">مايكل</span>
+              <span class="amp">&amp;</span>
+              <span data-ar="رحيل" data-en="Raheel">رحيل</span>
+            </h1>
+            <div class="hero-couple-names-en">Michael &amp; Raheel</div>
+          </div>
+
+          <a href="#date-section" class="scroll-down-indicator">
+            <span class="scroll-ar" data-ar="اسحب للأسفل" data-en="Scroll down">اسحب للأسفل</span>
+            <span>Scroll down</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M6 9l6 6 6-6"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================================
+         SECTION 2: SCRATCH TO REVEAL THE DATE (00:10 - 00:12)
+         ================================================================== -->
+    <section id="date-section" class="section-block scratch-section reveal-on-scroll">
+      <div class="section-header-script">The Date</div>
+      <h2 class="section-header-ar" data-ar="تاريخ الإكليل المبارك" data-en="Save The Date">تاريخ الإكليل المبارك</h2>
+
+      <div class="section-subtitle">
+        <span class="sparkle-star">✦</span>
+        <span data-ar="امسح بيدك على البطاقات للكشف عن التاريخ" data-en="Scratch the cards to reveal the date">
+          امسح بيدك على البطاقات للكشف عن التاريخ
+        </span>
+        <span class="sparkle-star">✦</span>
+      </div>
+
+      <!-- 3 Scratch-to-Reveal Cards: 23 | November (نوفمبر) | 2026 -->
+      <div class="scratch-cards-grid">
+        <!-- Card 1: DAY -->
+        <div class="scratch-card-col">
+          <div class="scratch-card-box">
+            <div class="scratch-revealed-content">
+              <span class="scratch-value-main">23</span>
+              <span class="scratch-value-ar" data-ar="الاثنين • ٢٣" data-en="Monday">الاثنين • ٢٣</span>
+            </div>
+            <canvas class="scratch-canvas" aria-label="امسح للكشف عن اليوم 23"></canvas>
+          </div>
+          <span class="scratch-col-label" data-ar="اليوم • DAY" data-en="DAY">اليوم • DAY</span>
+        </div>
+
+        <!-- Card 2: MONTH -->
+        <div class="scratch-card-col">
+          <div class="scratch-card-box">
+            <div class="scratch-revealed-content">
+              <span class="scratch-value-main" style="font-size: clamp(18px, 4.8vw, 23px);">November</span>
+              <span class="scratch-value-ar" data-ar="نوفمبر • ١١" data-en="Month 11">نوفمبر • ١١</span>
+            </div>
+            <canvas class="scratch-canvas" aria-label="امسح للكشف عن الشهر نوفمبر"></canvas>
+          </div>
+          <span class="scratch-col-label" data-ar="الشهر • MONTH" data-en="MONTH">الشهر • MONTH</span>
+        </div>
+
+        <!-- Card 3: YEAR -->
+        <div class="scratch-card-col">
+          <div class="scratch-card-box">
+            <div class="scratch-revealed-content">
+              <span class="scratch-value-main">2026</span>
+              <span class="scratch-value-ar" data-ar="٢٠٢٦" data-en="AD">٢٠٢٦</span>
+            </div>
+            <canvas class="scratch-canvas" aria-label="امسح للكشف عن السنة 2026"></canvas>
+          </div>
+          <span class="scratch-col-label" data-ar="السنة • YEAR" data-en="YEAR">السنة • YEAR</span>
+        </div>
+      </div>
+
+      <!-- Time Badge: 9:00 AM -->
+      <div>
+        <div class="ceremony-time-pill">
+          <span>🕘</span>
+          <span data-ar="الساعة ٩:٠٠ صباحاً • 9:00 AM" data-en="At 9:00 AM Morning">الساعة ٩:٠٠ صباحاً • 9:00 AM</span>
+        </div>
+      </div>
+
+      <div>
+        <button id="reveal-all-date-btn" type="button" class="scratch-action-btn" data-ar="✦ اكشف التاريخ بالكامل ✦" data-en="✦ Reveal Full Date ✦">
+          ✦ اكشف التاريخ بالكامل ✦
+        </button>
+      </div>
+    </section>
+
+    <!-- ==================================================================
+         SECTION 3: FORMAL CHRISTIAN INVITATION & BIBLE VERSE (00:13 - 00:14)
+         ================================================================== -->
+    <section class="section-block reveal-on-scroll" style="padding-top: 10px;">
+      <div class="arch-invitation-card">
+        <img src="assets/floral-bouquet.jpg" alt="" class="arch-card-floral-tl" aria-hidden="true" />
+        <img src="assets/floral-bouquet.jpg" alt="" class="arch-card-floral-br" aria-hidden="true" />
+
+        <!-- Ornate Christian Cross & Two Holy Crowns (إكليلين) Emblem -->
+        <div class="christian-crowns-emblem">
+          <svg viewBox="0 0 120 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Center Cross -->
+            <path d="M60 6V48M46 20H74" stroke="#C8A45D" stroke-width="2.6" stroke-linecap="round"/>
+            <circle cx="60" cy="20" r="4" fill="#C8A45D"/>
+            <!-- Left & Right Overlapping Wedding Crowns (الأكاليل المقدسة) -->
+            <circle cx="46" cy="58" r="18" stroke="#C8A45D" stroke-width="2"/>
+            <circle cx="74" cy="58" r="18" stroke="#C8A45D" stroke-width="2"/>
+            <path d="M34 45L39 36L46 42L53 36L58 45" stroke="#C8A45D" stroke-width="1.6" stroke-linejoin="round"/>
+            <path d="M62 45L67 36L74 42L81 36L86 45" stroke="#C8A45D" stroke-width="1.6" stroke-linejoin="round"/>
+            <!-- Olive Branches -->
+            <path d="M20 72C30 80 46 84 60 84C74 84 90 80 100 72" stroke="#C8A45D" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+
+        <p class="blessing-opening" data-ar="بِنِعْمَةِ اللهِ وَبَرَكَةِ السَّيِّدَةِ العَذْرَاءِ مَرْيَم" data-en="By the Grace of God & St. Mary's Blessing">
+          بِنِعْمَةِ اللهِ وَبَرَكَةِ السَّيِّدَةِ العَذْرَاءِ مَرْيَم
+        </p>
+
+        <p class="invite-formal-lead" data-ar="نتشرف بدعوة سيادتكم لحضور صلاة الإكليل المقدس ومشاركتنا فرحة زفاف" data-en="YOU ARE CORDIALLY INVITED TO CELEBRATE THE HOLY MATRIMONY OF">
+          نتشرف بدعوة سيادتكم لحضور صلاة الإكليل المقدس ومشاركتنا فرحة زفاف
+        </p>
+
+        <div class="invite-bride-groom-block">
+          <div class="invite-name-single-ar" data-ar="مايكل" data-en="Michael">مايكل</div>
+          <div class="invite-name-single-en">Michael</div>
+
+          <div class="invite-with-divider">With</div>
+
+          <div class="invite-name-single-ar" data-ar="رحيل" data-en="Raheel">رحيل</div>
+          <div class="invite-name-single-en">Raheel</div>
+        </div>
+
+        <div class="dear-friends-title">Dear Family &amp; Friends</div>
+        <p class="dear-friends-text" data-ar="أحبائنا العائلة والأصدقاء، يسعدنا ويشرفنا حضوركم لمشاركتنا فرحة العمر وصلواتكم معنا في يوم إكليلنا المبارك، لنبدأ معاً رحلة حياتنا الجديدة في بيت الرب." data-en="Join us for a blessed morning of prayer, love, joy, and unforgettable memories as we unite in Holy Matrimony and begin our forever.">
+          أحبائنا العائلة والأصدقاء، يسعدنا ويشرفنا حضوركم لمشاركتنا فرحة العمر وصلواتكم معنا في يوم إكليلنا المبارك، لنبدأ معاً رحلة حياتنا الجديدة في بيت الرب.
+        </p>
+      </div>
+
+      <!-- Christian Marriage Bible Verse Card (00:14) -->
+      <div class="scripture-quote-box reveal-on-scroll">
+        <div style="color: var(--champagne-gold); font-size: 20px; margin-bottom: 6px;">✞</div>
+        <p class="scripture-verse-ar">
+          «فَإِذًا لَيْسَا بَعْدُ اثْنَيْنِ بَلْ جَسَدٌ وَاحِدٌ. فَالَّذِي جَمَعَهُ اللهُ لاَ يُفَرِّقُهُ إِنْسَانٌ»
+        </p>
+        <p class="scripture-verse-en">
+          “So they are no longer two, but one flesh. Therefore what God has joined together, let no one separate.”
+        </p>
+        <p class="scripture-ref" data-ar="— إنجيل متى ١٩ : ٦ —" data-en="— Matthew 19:6 —">
+          — إنجيل متى ١٩ : ٦ —
+        </p>
+      </div>
+    </section>
+
+    <!-- ==================================================================
+         SECTION 4: WEDDING TIMELINE (برنامج الإكليل — 00:15 - 00:17)
+         ================================================================== -->
+    <section class="section-block reveal-on-scroll">
+      <div class="section-header-script">Wedding Timeline</div>
+      <h2 class="section-header-ar" data-ar="برنامج الإكليل المبارك" data-en="Order of the Morning">برنامج الإكليل المبارك</h2>
+      <div class="section-subtitle">
+        <span class="sparkle-star">✦</span>
+        <span data-ar="الاثنين ٢٣ نوفمبر ٢٠٢٦ • صباحاً" data-en="Monday, 23 November 2026 • Morning">الاثنين ٢٣ نوفمبر ٢٠٢٦ • صباحاً</span>
+        <span class="sparkle-star">✦</span>
+      </div>
+
+      <div class="timeline-container">
+        <!-- Milestone 1: 8:30 AM Guest Arrival -->
+        <div class="timeline-row">
+          <div class="timeline-arch-vignette">
+            <!-- Ornate Church Arch SVG -->
+            <svg viewBox="0 0 80 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M14 86V44C14 26 26 14 40 10C54 14 66 26 66 44V86" stroke="#C8A45D" stroke-width="2"/>
+              <path d="M22 86V46C22 32 30 22 40 18C50 22 58 32 58 46V86" stroke="#C8A45D" stroke-width="1.2" stroke-dasharray="2 2"/>
+              <path d="M40 2V12M36 6H44" stroke="#C8A45D" stroke-width="1.8" stroke-linecap="round"/>
+              <line x1="8" y1="86" x2="72" y2="86" stroke="#C8A45D" stroke-width="2"/>
+              <circle cx="40" cy="48" r="6" stroke="#C8A45D" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <div class="timeline-node"></div>
+          <div class="timeline-info">
+            <div class="timeline-time">8:30 am</div>
+            <div class="timeline-title-ar" data-ar="استقبال المدعوين والتجمع" data-en="Guest Arrival & Welcome">استقبال المدعوين والتجمع</div>
+            <div class="timeline-title-en">Guest Arrival at Church</div>
+          </div>
+        </div>
+
+        <!-- Milestone 2: 9:00 AM Holy Crowning Ceremony -->
+        <div class="timeline-row">
+          <div class="timeline-info">
+            <div class="timeline-time">9:00 am</div>
+            <div class="timeline-title-ar" data-ar="دخول العروسين وصلاة الإكليل" data-en="Bride Entrance & Holy Crowning">دخول العروسين وصلاة الإكليل</div>
+            <div class="timeline-title-en">Holy Matrimony Ceremony</div>
+          </div>
+          <div class="timeline-node"></div>
+          <div class="timeline-arch-vignette">
+            <!-- Two Wedding Crowns & Cross SVG -->
+            <svg viewBox="0 0 80 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M40 14V36M32 22H48" stroke="#C8A45D" stroke-width="2.2" stroke-linecap="round"/>
+              <circle cx="31" cy="56" r="14" stroke="#C8A45D" stroke-width="1.8"/>
+              <circle cx="49" cy="56" r="14" stroke="#C8A45D" stroke-width="1.8"/>
+              <path d="M21 44L26 37L31 42L36 37L41 44" stroke="#C8A45D" stroke-width="1.5"/>
+              <path d="M39 44L44 37L49 42L54 37L59 44" stroke="#C8A45D" stroke-width="1.5"/>
+              <path d="M22 76Q40 84 58 76" stroke="#C8A45D" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Milestone 3: 10:15 AM Rings & Congratulations -->
+        <div class="timeline-row">
+          <div class="timeline-arch-vignette">
+            <!-- Wedding Rings & Diamond SVG -->
+            <svg viewBox="0 0 80 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="32" cy="56" r="15" stroke="#C8A45D" stroke-width="2"/>
+              <circle cx="48" cy="56" r="15" stroke="#C8A45D" stroke-width="2"/>
+              <polygon points="48,32 54,38 48,43 42,38" stroke="#C8A45D" stroke-width="1.6" fill="#FAF2E1"/>
+              <path d="M40 20L42 25L47 27L42 29L40 34L38 29L33 27L38 25Z" fill="#C8A45D"/>
+            </svg>
+          </div>
+          <div class="timeline-node"></div>
+          <div class="timeline-info">
+            <div class="timeline-time">10:15 am</div>
+            <div class="timeline-title-ar" data-ar="التهاني والصور التذكارية" data-en="Congratulations & Photos">التهاني والصور التذكارية</div>
+            <div class="timeline-title-en">Blessings &amp; Portraits</div>
+          </div>
+        </div>
+
+        <!-- Milestone 4: 11:00 AM Joyful Celebration -->
+        <div class="timeline-row">
+          <div class="timeline-info">
+            <div class="timeline-time">11:00 am</div>
+            <div class="timeline-title-ar" data-ar="مشاركة الفرحة والاحتفال" data-en="Joyful Celebration">مشاركة الفرحة والاحتفال</div>
+            <div class="timeline-title-en">Celebrating Together</div>
+          </div>
+          <div class="timeline-node"></div>
+          <div class="timeline-arch-vignette">
+            <!-- Wedding Bells & Dove Ribbon SVG -->
+            <svg viewBox="0 0 80 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M28 34C22 34 18 42 18 54L14 62H42L38 54C38 42 34 34 28 34Z" stroke="#C8A45D" stroke-width="1.8"/>
+              <path d="M52 34C46 34 42 42 42 54L38 62H66L62 54C62 42 58 34 52 34Z" stroke="#C8A45D" stroke-width="1.8"/>
+              <circle cx="28" cy="66" r="3" fill="#C8A45D"/>
+              <circle cx="52" cy="66" r="3" fill="#C8A45D"/>
+              <path d="M28 32C34 22 46 22 52 32" stroke="#C8A45D" stroke-width="1.8" stroke-linecap="round"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================================
+         SECTION 5: LIVE COUNTDOWN TIMER (00:17 - 00:18)
+         ================================================================== -->
+    <section class="section-block reveal-on-scroll">
+      <div class="countdown-card">
+        <div class="section-header-script">The Celebration Begins</div>
+        <h2 class="section-header-ar" data-ar="يبدأ الإكليل بمشيئة الرب خلال" data-en="Counting Down to Our Forever">يبدأ الإكليل بمشيئة الرب خلال</h2>
+
+        <div class="countdown-grid" aria-live="polite">
+          <div class="countdown-unit">
+            <span id="cd-days" class="countdown-number">11</span>
+            <span class="countdown-label" data-ar="يوم • Days" data-en="Days">يوم • Days</span>
+          </div>
+          <span class="countdown-sep">:</span>
+          <div class="countdown-unit">
+            <span id="cd-hours" class="countdown-number">08</span>
+            <span class="countdown-label" data-ar="ساعة • Hours" data-en="Hours">ساعة • Hours</span>
+          </div>
+          <span class="countdown-sep">:</span>
+          <div class="countdown-unit">
+            <span id="cd-minutes" class="countdown-number">00</span>
+            <span class="countdown-label" data-ar="دقيقة • Mins" data-en="Minutes">دقيقة • Mins</span>
+          </div>
+          <span class="countdown-sep">:</span>
+          <div class="countdown-unit">
+            <span id="cd-seconds" class="countdown-number">00</span>
+            <span class="countdown-label" data-ar="ثانية • Secs" data-en="Seconds">ثانية • Secs</span>
+          </div>
+        </div>
+
+        <div class="calendar-actions">
+          <a id="google-cal-btn" href="#" target="_blank" rel="noopener noreferrer" class="outline-gold-btn">
+            <span>📅</span>
+            <span data-ar="إضافة لتقويم Google" data-en="Add to Google Calendar">إضافة لتقويم Google</span>
+          </a>
+          <button id="ics-cal-btn" type="button" class="outline-gold-btn">
+            <span>📲</span>
+            <span data-ar="حفظ في تقويم الهاتف (.ics)" data-en="Save to Phone Calendar">حفظ في تقويم الهاتف (.ics)</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================================
+         SECTION 6: LOCATION & GOOGLE MAPS (00:18 - 00:20)
+         ================================================================== -->
+    <section id="location-section" class="section-block reveal-on-scroll">
+      <div class="venue-card">
+        <div class="section-header-script">Location</div>
+        <div class="venue-city-badge">PORT SAID • بورسعيد</div>
+        <h2 class="venue-church-name" data-ar="كنيسة السيدة العذراء مريم ببورسعيد" data-en="St. Mary's Coptic Orthodox Church">
+          كنيسة السيدة العذراء مريم ببورسعيد
+        </h2>
+        <p class="venue-church-en">St. Mary's Church — Port Said, Egypt</p>
+
+        <!-- Custom Watercolor Illustration of St. Mary's Church -->
+        <div class="venue-illustration-frame">
+          <img
+            src="assets/church-venue.jpg"
+            alt="كنيسة السيدة العذراء مريم ببورسعيد"
+            loading="lazy"
+          />
+        </div>
+
+        <!-- Embedded Map + Direct Link to https://maps.app.goo.gl/Dx5ufvGqsqt8ftdJ8?g_st=ic -->
+        <div class="map-preview-wrapper">
+          <iframe
+            title="خريطة كنيسة السيدة العذراء مريم ببورسعيد"
+            src="https://www.google.com/maps?q=%D9%83%D9%86%D9%8A%D8%B3%D8%A9+%D8%A7%D9%84%D8%B3%D9%8A%D8%AF%D8%A9+%D8%A7%D9%84%D8%B9%D8%B0%D8%B1%D8%A7%D8%A1+%D9%85%D8%B1%D9%8A%D9%85+%D8%A8%D9%88%D8%B1%D8%B3%D8%B9%D9%8A%D8%AF&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+          <a
+            href="https://maps.app.goo.gl/Dx5ufvGqsqt8ftdJ8?g_st=ic"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="open-in-maps-floating"
+          >
+            <span>📍</span>
+            <span data-ar="افتح في الخرائط ↗" data-en="Open in Maps ↗">افتح في الخرائط ↗</span>
+          </a>
+        </div>
+
+        <div style="display: flex; flex-direction: column; gap: 10px; align-items: center;">
+          <a
+            href="https://maps.app.goo.gl/Dx5ufvGqsqt8ftdJ8?g_st=ic"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="gold-btn"
+            style="width: 100%; max-width: 310px;"
+          >
+            <span>🗺️</span>
+            <span data-ar="الاتجاهات عبر خرائط جوجل ↗" data-en="Get Directions in Google Maps ↗">الاتجاهات عبر خرائط جوجل ↗</span>
+          </a>
+
+          <button id="copy-map-btn" type="button" class="outline-gold-btn">
+            <span>🔗</span>
+            <span data-ar="نسخ رابط موقع الكنيسة" data-en="Copy Church Location Link">نسخ رابط موقع الكنيسة</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================================
+         SECTION 7: MORNING CEREMONY PALETTE & NOTES (00:20 - 00:22)
+         ================================================================== -->
+    <section class="section-block reveal-on-scroll">
+      <div class="attire-card">
+        <div class="section-header-script">Dress Code &amp; Notes</div>
+        <h2 class="section-header-ar" data-ar="إطلالة الصباح وملاحظات الحضور" data-en="Morning Ceremony Attire">إطلالة الصباح وملاحظات الحضور</h2>
+
+        <p class="attire-note" data-ar="يسعدنا تألقكم بألوان الصباح الهادئة والكلاسيكية الأنيقة التي تزيد يومنا بهجة وجمالاً." data-en="We kindly invite our guests to dress in elegant morning formal or soft pastel shades.">
+          يسعدنا تألقكم بألوان الصباح الهادئة والكلاسيكية الأنيقة التي تزيد يومنا بهجة وجمالاً.
+        </p>
+
+        <div class="palette-swatches" aria-label="ألوان مقترحة">
+          <span class="swatch-circle" style="background: #C7B8CE;" title="Soft Lavender"></span>
+          <span class="swatch-circle" style="background: #A9C2D6;" title="Dusty Sky Blue"></span>
+          <span class="swatch-circle" style="background: #B9CDBF;" title="Sage Green"></span>
+          <span class="swatch-circle" style="background: #E2C6C2;" title="Blush Rose"></span>
+          <span class="swatch-circle" style="background: #D8C39E;" title="Champagne Gold"></span>
+          <span class="swatch-circle" style="background: #2C3545;" title="Classic Navy"></span>
+        </div>
+
+        <p class="attire-note" style="font-size: 14px; color: var(--text-muted);" data-ar="✦ نرجو التكرم بترك اللون الأبيض للعروس، والحضور قبل الموعد بـ ١٥ دقيقة لمشاركتنا بداية صلاة الإكليل المقدس الساعة ٩:٠٠ صباحاً ✦" data-en="✦ Please reserve white and ivory for the bride, and kindly arrive by 8:45 AM for the 9:00 AM Crowning Ceremony ✦">
+          ✦ نرجو التكرم بترك اللون الأبيض للعروس، والحضور قبل الموعد بـ ١٥ دقيقة لمشاركتنا بداية صلاة الإكليل المقدس الساعة ٩:٠٠ صباحاً ✦
+        </p>
+      </div>
+    </section>
+
+    <!-- ==================================================================
+         SECTION 8: CONFIRM ATTENDANCE — RSVP & BLESSINGS (00:23 - 00:25)
+         ================================================================== -->
+    <section id="rsvp-section" class="section-block reveal-on-scroll">
+      <div class="rsvp-card">
+        <div class="section-header-script">Confirm Your Attendance</div>
+        <h2 class="section-header-ar" data-ar="تأكيد الحضور وسجل المباركات" data-en="RSVP &amp; Wedding Blessings">تأكيد الحضور وسجل المباركات</h2>
+
+        <p class="attire-note" style="margin-bottom: 22px;" data-ar="وجودكم معنا وصلواتكم هي أجمل هدية في يوم زفافنا. نسعد بتأكيد حضوركم وكتابة كلمة تهنئة للذكرى." data-en="Your love, prayers, and presence mean the world to us. Kindly confirm your attendance and leave a blessing.">
+          وجودكم معنا وصلواتكم هي أجمل هدية في يوم زفافنا. نسعد بتأكيد حضوركم وكتابة كلمة تهنئة للذكرى.
+        </p>
+
+        <button id="rsvp-open-btn" type="button" class="gold-btn" style="min-width: 220px;">
+          <span>✉</span>
+          <span data-ar="تأكيد الحضور والتهنئة • RSVP" data-en="Confirm Attendance • RSVP">تأكيد الحضور والتهنئة • RSVP</span>
+        </button>
+
+        <div class="dear-friends-title" style="margin-top: 28px; font-size: 26px;">
+          Hope to see you there
+        </div>
+        <p style="font-size: 14px; color: var(--gold-deep); font-weight: 700;" data-ar="في انتظاركم بكل محبة وفرح 🤍" data-en="Looking forward to celebrating with you 🤍">
+          في انتظاركم بكل محبة وفرح 🤍
+        </p>
+
+        <!-- Live Guest Wishes & Blessings Wall -->
+        <div id="wishes-wall" class="wishes-wall"></div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="invitation-footer">
+      <div class="footer-monogram">Michael &amp; Raheel</div>
+      <p style="font-size: 15px; font-weight: 700; color: var(--text-dark);">
+        مايكل &amp; رحيل • ٢٣ / ١١ / ٢٠٢٦
+      </p>
+      <p style="font-size: 13px; margin-top: 4px;">
+        كنيسة السيدة العذراء مريم ببورسعيد — الساعة ٩:٠٠ صباحاً
+      </p>
+    </footer>
+
+  </main>
+
+  <!-- ====================================================================
+       SLIDE-UP RSVP MODAL SHEET (Matching 00:24 - 00:25 of Video)
+       ==================================================================== -->
+  <div id="rsvp-modal" class="rsvp-modal-backdrop" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="rsvp-modal-sheet">
+      <div class="rsvp-modal-header">
+        <div>
+          <h3 style="font-family: var(--font-ar-display); font-size: 24px; color: var(--text-dark);" data-ar="تأكيد الحضور والتهنئة" data-en="Confirm Your Attendance">
+            تأكيد الحضور والتهنئة
+          </h3>
+          <p style="font-size: 13px; color: var(--text-muted);" data-ar="زفاف مايكل & رحيل • ٢٣ نوفمبر ٢٠٢٦" data-en="Michael & Raheel • 23 November 2026">
+            زفاف مايكل &amp; رحيل • ٢٣ نوفمبر ٢٠٢٦
+          </p>
+        </div>
+        <button id="rsvp-close-btn" type="button" class="rsvp-close-btn" aria-label="إغلاق">✕</button>
+      </div>
+
+      <form id="rsvp-form">
+        <div class="rsvp-form-group">
+          <label for="rsvp-name" class="rsvp-label" data-ar="الاسم بالكامل *" data-en="Your Full Name *">الاسم بالكامل *</label>
+          <input
+            id="rsvp-name"
+            name="name"
+            type="text"
+            required
+            class="rsvp-input"
+            placeholder="اكتب اسمك الكريم هنا..."
+            data-placeholder-ar="اكتب اسمك الكريم هنا..."
+            data-placeholder-en="Enter your full name..."
+          />
+        </div>
+
+        <div class="rsvp-form-group">
+          <span class="rsvp-label" data-ar="هل ستتمكن من الحضور؟" data-en="Will you attend?">هل ستتمكن من الحضور؟</span>
+          <div class="rsvp-radio-group">
+            <label class="rsvp-radio-option">
+              <input type="radio" name="attending" value="yes" checked />
+              <span data-ar="نعم، سأحضر بكل سرور 🤍" data-en="Yes, I will joyfully attend 🤍">نعم، سأحضر بكل سرور 🤍</span>
+            </label>
+            <label class="rsvp-radio-option">
+              <input type="radio" name="attending" value="no" />
+              <span data-ar="للأسف لن أتمكن، ألف مبروك للعروسين 💐" data-en="Unfortunately I can't, warm blessings 💐">للأسف لن أتمكن، ألف مبروك للعروسين 💐</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="rsvp-form-group">
+          <label for="rsvp-guests" class="rsvp-label" data-ar="عدد الحضور" data-en="Number of Guests Attending">عدد الحضور</label>
+          <input
+            id="rsvp-guests"
+            name="guests"
+            type="number"
+            min="1"
+            max="10"
+            value="1"
+            class="rsvp-input"
+          />
+        </div>
+
+        <div class="rsvp-form-group">
+          <label for="rsvp-message" class="rsvp-label" data-ar="كلمة تهنئة أو مباركة للعروسين (مايكل & رحيل)" data-en="Blessing or Wish for Michael & Raheel">
+            كلمة تهنئة أو مباركة للعروسين (مايكل &amp; رحيل)
+          </label>
+          <textarea
+            id="rsvp-message"
+            name="message"
+            rows="3"
+            class="rsvp-textarea"
+            placeholder="اكتب تهنئتك للعروسين..."
+            data-placeholder-ar="اكتب تهنئتك للعروسين..."
+            data-placeholder-en="Write your blessing for the couple..."
+          ></textarea>
+        </div>
+
+        <button type="submit" class="gold-btn" style="width: 100%; margin-top: 6px;">
+          <span data-ar="إرسال التأكيد والتهنئة ✦" data-en="Confirm &amp; Send Blessing ✦">إرسال التأكيد والتهنئة ✦</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="luxury-toast" class="luxury-toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
