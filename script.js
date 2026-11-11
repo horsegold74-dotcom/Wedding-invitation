@@ -13,9 +13,9 @@
     groomEn: 'Michael',
     brideEn: 'Raheel',
     isoDate: '2026-11-23T09:00:00+02:00',
-    endIsoDate: '2026-11-23T12:00:00+02:00',
+    endIsoDate: '2026-11-23T12:30:00+02:00',
     mapsUrl: 'https://maps.app.goo.gl/Dx5ufvGqsqt8ftdJ8?g_st=ic',
-    whatsappNumber: '201205729014', // 01205729014 in international format (Egypt +20)
+    whatsappNumber: '201550930513', // 01550930513 in international format (Egypt +20)
     venueAr: 'كنيسة السيدة العذراء مريم ببورسعيد',
     venueEn: "St. Mary's Coptic Orthodox Church, Port Said",
     musicLoopStart: 0.25,
@@ -402,7 +402,7 @@
     const gCalUrl = new URL('https://calendar.google.com/calendar/render');
     gCalUrl.searchParams.set('action', 'TEMPLATE');
     gCalUrl.searchParams.set('text', eventTitle);
-    gCalUrl.searchParams.set('dates', '20261123T070000Z/20261123T100000Z');
+    gCalUrl.searchParams.set('dates', '20261123T070000Z/20261123T103000Z');
     gCalUrl.searchParams.set('details', eventDetails);
     gCalUrl.searchParams.set('location', eventLocation);
     googleCalBtn.href = gCalUrl.toString();
@@ -418,7 +418,7 @@
         'UID:michael-raheel-20261123@wedding',
         'DTSTAMP:20261112T000000Z',
         'DTSTART:20261123T070000Z',
-        'DTEND:20261123T100000Z',
+        'DTEND:20261123T103000Z',
         `SUMMARY:${eventTitle}`,
         `DESCRIPTION:${eventDetails.replace(/\n/g, '\\n')}`,
         `LOCATION:${eventLocation}`,
