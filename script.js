@@ -15,6 +15,7 @@
     isoDate: '2026-11-23T09:00:00+02:00',
     endIsoDate: '2026-11-23T12:00:00+02:00',
     mapsUrl: 'https://maps.app.goo.gl/Dx5ufvGqsqt8ftdJ8?g_st=ic',
+    whatsappNumber: '201205729014', // 01205729014 in international format (Egypt +20)
     venueAr: 'كنيسة السيدة العذراء مريم ببورسعيد',
     venueEn: "St. Mary's Coptic Orthodox Church, Port Said",
     musicLoopStart: 0.25,
@@ -575,6 +576,27 @@
       saveWishes(currentList);
       renderWishes();
 
+      // Build the WhatsApp RSVP message and open a chat with the couple
+      const attendanceLine =
+        attending === 'yes'
+          ? `نعم، سأحضر بإذن الله 🤍 (عدد الحضور: ${guests})`
+          : 'للأسف لن أتمكن من الحضور 💐';
+      const waText = [
+        '✞ تأكيد حضور زفاف مايكل & رحيل ✞',
+        '📅 الاثنين 23/11/2026 • 9:00 صباحاً',
+        '⛪ كنيسة السيدة العذراء مريم ببورسعيد',
+        '',
+        `👤 الاسم: ${name}`,
+        `✅ الحضور: ${attendanceLine}`,
+        '',
+        `💌 التهنئة: ${message}`
+      ].join('\n');
+      const waUrl = `https://wa.me/${WEDDING_CONFIG.whatsappNumber}?text=${encodeURIComponent(waText)}`;
+      const waWindow = window.open(waUrl, '_blank');
+      if (!waWindow) {
+        window.location.href = waUrl;
+      }
+
       playCelestialChime([523.25, 659.25, 783.99, 1046.5, 1318.51]);
       spawnBurstParticles(window.innerWidth / 2, window.innerHeight * 0.65, 28);
 
@@ -582,8 +604,8 @@
       closeRsvpModal();
       showToast(
         currentLang === 'ar'
-          ? `شكراً لك يا ${name}! تم تسجيل تأكيد حضورك وتهنئتك للعروسين 🤍`
-          : `Thank you ${name}! Your RSVP and blessing have been recorded 🤍`
+          ? `شكراً يا ${name}! اضغط "إرسال" في واتساب لتصل رسالتك للعروسين 🤍`
+          : `Thank you ${name}! Tap "Send" in WhatsApp to deliver your RSVP 🤍`
       );
     });
   }
@@ -750,3 +772,4 @@
     setTimeout(setupScratchCards, 80);
   }
 })();
+
