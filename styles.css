@@ -1027,17 +1027,34 @@ body:not(.envelope-locked) .hero-artwork-img {
   margin: 0 auto;
 }
 
-.bishop-blessing-text {
+.bishop-blessing-box {
   position: relative;
+  max-width: 345px;
+  margin: 14px auto 16px;
+  padding: 12px 10px;
+  border-top: 1px solid rgba(200, 164, 93, 0.38);
+  border-bottom: 1px solid rgba(200, 164, 93, 0.38);
+  background: linear-gradient(90deg, transparent, rgba(200, 164, 93, 0.06), transparent);
+}
+
+.bishop-line {
+  display: block;
   font-family: var(--font-ar-serif);
-  font-size: 16px;
+  font-size: 15.5px;
   font-weight: 700;
-  line-height: 1.78;
+  line-height: 1.65;
   color: var(--gold-deep);
-  max-width: 335px;
-  margin: 12px auto 0;
-  padding-top: 10px;
-  border-top: 1px solid rgba(200, 164, 93, 0.35);
+}
+
+.bishop-name-line {
+  display: block;
+  white-space: nowrap;
+  font-family: var(--font-ar-display);
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 1.55;
+  color: var(--text-dark);
+  margin: 2px 0;
 }
 
 /* Bible Verse Card (00:14) */
