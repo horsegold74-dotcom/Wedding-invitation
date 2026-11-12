@@ -927,6 +927,9 @@ body:not(.envelope-locked) .hero-artwork-img {
   width: 140px;
   transform: rotate(90deg);
   mix-blend-mode: multiply;
+  filter: brightness(1.045) contrast(1.06);
+  -webkit-mask-image: radial-gradient(circle at 25% 25%, #000 50%, transparent 82%);
+  mask-image: radial-gradient(circle at 25% 25%, #000 50%, transparent 82%);
   opacity: 0.85;
   pointer-events: none;
 }
@@ -938,6 +941,9 @@ body:not(.envelope-locked) .hero-artwork-img {
   width: 155px;
   transform: rotate(-90deg);
   mix-blend-mode: multiply;
+  filter: brightness(1.045) contrast(1.06);
+  -webkit-mask-image: radial-gradient(circle at 25% 25%, #000 50%, transparent 82%);
+  mask-image: radial-gradient(circle at 25% 25%, #000 50%, transparent 82%);
   opacity: 0.88;
   pointer-events: none;
 }
@@ -951,10 +957,12 @@ body:not(.envelope-locked) .hero-artwork-img {
 
 .blessing-opening {
   font-family: var(--font-ar-serif);
-  font-size: 16px;
+  font-size: 16.5px;
+  line-height: 1.65;
   font-weight: 700;
   color: var(--gold-deep);
-  margin-bottom: 10px;
+  margin: 0 auto 12px;
+  max-width: 330px;
 }
 
 .invite-formal-lead {
@@ -1015,8 +1023,21 @@ body:not(.envelope-locked) .hero-artwork-img {
   font-size: 16px;
   line-height: 1.75;
   color: var(--text-body);
-  max-width: 320px;
+  max-width: 325px;
   margin: 0 auto;
+}
+
+.bishop-blessing-text {
+  position: relative;
+  font-family: var(--font-ar-serif);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.78;
+  color: var(--gold-deep);
+  max-width: 335px;
+  margin: 12px auto 0;
+  padding-top: 10px;
+  border-top: 1px solid rgba(200, 164, 93, 0.35);
 }
 
 /* Bible Verse Card (00:14) */
