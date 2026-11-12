@@ -15,7 +15,8 @@
     isoDate: '2026-11-23T09:00:00+02:00',
     endIsoDate: '2026-11-23T12:30:00+02:00',
     mapsUrl: 'https://maps.app.goo.gl/Dx5ufvGqsqt8ftdJ8?g_st=ic',
-    whatsappNumber: '201550930513', // 01550930513 in international format (Egypt +20)
+    // RSVP is sent to both numbers one after the other (Egypt +20 international format)
+    whatsappNumbers: ['201550930513', '201205729014'], // 01550930513 then 01205729014
     venueAr: 'كنيسة السيدة العذراء مريم ببورسعيد',
     venueEn: "St. Mary's Coptic Orthodox Church, Port Said",
     musicLoopStart: 0.25,
@@ -552,6 +553,37 @@
     });
   }
 
+  // Step 2 sheet: send the same RSVP to the second WhatsApp number
+  const waFollowup = document.getElementById('wa-followup');
+  const waSecondBtn = document.getElementById('wa-second-btn');
+  const waFollowupClose = document.getElementById('wa-followup-close');
+
+  function openWaFollowup() {
+    if (!waFollowup) return;
+    waFollowup.classList.add('is-open');
+    waFollowup.setAttribute('aria-hidden', 'false');
+  }
+
+  function closeWaFollowup() {
+    if (!waFollowup) return;
+    waFollowup.classList.remove('is-open');
+    waFollowup.setAttribute('aria-hidden', 'true');
+  }
+
+  if (waSecondBtn) {
+    waSecondBtn.addEventListener('click', () => {
+      setTimeout(() => {
+        closeWaFollowup();
+        showToast(
+          currentLang === 'ar'
+            ? 'شكراً لك! وصلت محبتك وتأكيدك للعروسين 🤍'
+            : 'Thank you! Your RSVP has been sent 🤍'
+        );
+      }, 600);
+    });
+  }
+  if (waFollowupClose) waFollowupClose.addEventListener('click', closeWaFollowup);
+
   if (rsvpForm) {
     rsvpForm.addEventListener('submit', (e) => {
       e.preventDefault();
@@ -591,22 +623,25 @@
         '',
         `💌 التهنئة: ${message}`
       ].join('\n');
-      const waUrl = `https://wa.me/${WEDDING_CONFIG.whatsappNumber}?text=${encodeURIComponent(waText)}`;
-      const waWindow = window.open(waUrl, '_blank');
-      if (!waWindow) {
-        window.location.href = waUrl;
-      }
+      const [firstNumber, secondNumber] = WEDDING_CONFIG.whatsappNumbers;
+      const buildWaUrl = (num) => `https://wa.me/${num}?text=${encodeURIComponent(waText)}`;
+
+      // Prepare step 2 (second number) before leaving for WhatsApp
+      if (waSecondBtn) waSecondBtn.href = buildWaUrl(secondNumber);
 
       playCelestialChime([523.25, 659.25, 783.99, 1046.5, 1318.51]);
       spawnBurstParticles(window.innerWidth / 2, window.innerHeight * 0.65, 28);
 
       rsvpForm.reset();
       closeRsvpModal();
-      showToast(
-        currentLang === 'ar'
-          ? `شكراً يا ${name}! اضغط "إرسال" في واتساب لتصل رسالتك للعروسين 🤍`
-          : `Thank you ${name}! Tap "Send" in WhatsApp to deliver your RSVP 🤍`
-      );
+      openWaFollowup();
+
+      // Step 1: open WhatsApp chat with the first number
+      const firstUrl = buildWaUrl(firstNumber);
+      const waWindow = window.open(firstUrl, '_blank');
+      if (!waWindow) {
+        window.location.href = firstUrl;
+      }
     });
   }
 
